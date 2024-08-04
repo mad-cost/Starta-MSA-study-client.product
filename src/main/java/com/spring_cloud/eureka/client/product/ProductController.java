@@ -12,12 +12,10 @@ public class ProductController {
   @Value("${server.port}") // 애플리케이션이 실행 중인 포트를 주입받습니다.
   private String serverPort;
 
-  @GetMapping("/product/{id}")
+  @GetMapping("/product")
   public String getProduct(
-          @PathVariable("id")
-          String id
   ) {
-    return "Product " + id + " info!!!!! From port : " + serverPort ;
+    return "Product info!!!!! From port : " + serverPort ;
   }
 
 
