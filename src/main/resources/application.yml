@@ -1,10 +1,29 @@
 spring:
   application:
     name: product-service
+  profiles:
+    active: local # 활성화할 프로파일을 지정, local 프로파일이 활성화
+  config:
+    import: "configserver:" # Spring Cloud Config Server를 사용하여 설정을 가져오겠다는 의미
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server # Config Server의 서비스 ID 지정
+
 server:
-  port: 19093
+  port: 0
 eureka:
   client:
     service-url:
       # 유레카 서버의 주소 설정
       defaultZone: http://localhost:19090/eureka/
+
+# @RefreshScope
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+message: "default message"
