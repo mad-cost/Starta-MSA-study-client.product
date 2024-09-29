@@ -1,4 +1,4 @@
-## 📝MSA Eureka 설정
+## 📝로드 벨런싱 설정
 
-* 서비스 디스커버리 Eureka <br>
-😺 Blog: https://happy-coding.tistory.com/12
+* 로드 밸런싱 Ribbon (Round Robin) <br>
+😺 Blog: https://happy-coding.tistory.com/13
